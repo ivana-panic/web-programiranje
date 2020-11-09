@@ -1,0 +1,174 @@
+body {
+  width: 100%;
+  height: 100%;
+}
+#wrap {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+#header {
+  width: 100%;
+  height: 51px;
+  margin: 0 auto;
+}
+/*
+#logo {
+  width: 10%;
+  height: 90%;
+  float: left;
+  margin-left: 50px;
+}
+*/
+#nav_bar {
+  width: 100%;
+  height: 100%;
+  float: right;
+}
+#motivation_text_image {
+  width: 100%;
+  height: 630px;
+  background-image: url("image/WTTC Together In Travel.jpg");
+  background-repeat: no-repeat;
+}
+#agency_info {
+  width: 80%;
+  height: 100%;
+  margin: 0 auto;
+}
+#agency_info_text {
+  width: 60%;
+  height: 100%;
+  float: left;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+}
+#agency_info_image {
+  width: 35%;
+  height: 100%;
+  float: right;
+  margin-top: 15px;
+}
+.agency_text {
+  font: small-caps bold 24px/1 sans-serif;
+}
+#image {
+  width: 400px;
+  height: 300px;
+}
+#agency_text_button {
+  width: 110px;
+  margin: 0 auto;
+  padding-top: 18px;
+}
+#title_trip_list {
+  margin: 0 auto;
+  height: 30px;
+  width: 30%;
+}
+#trip_list {
+  width: 80%;
+  height: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+hr {
+  display: block;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  margin-left: auto;
+  margin-right: auto;
+  border-style: inset;
+  border-width: 1px;
+}
+.trip_box {
+  width: 90%;
+  height: 100%;
+  margin: 0 auto;
+  padding-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+.trip_image1 {
+  width: 33%;
+  height: 90%;
+  background-image: url("image/10.-Daydream-Full-Island-looking-East-to-Molle-Islands-Large-350x450.jpg");
+  margin-top: 25px;
+  margin-right: 15px;
+  padding: 10px;
+  box-shadow: 5px 10px 18px #888888;
+}
+.trip_image2 {
+  width: 33%;
+  height: 90%;
+  background-image: url("image/unnamed.jpg");
+  margin-top: 25px;
+  margin-left: 15px;
+  padding: 10px;
+  box-shadow: 5px 10px 18px #888888;
+}
+.trip_image3 {
+  width: 33%;
+  height: 90%;
+  background-image: url("image/c04c0aefd226d55fd27c60a18a131812.jpg");
+  margin-top: 25px;
+  margin-left: 30px;
+  padding: 10px;
+  box-shadow: 5px 10px 18px #888888;
+}
+.trip_image4 {
+  width: 33%;
+  height: 90%;
+  background-image: url("image/healthy-nature.jpg");
+  margin-top: 25px;
+  margin-right: 15px;
+  padding: 10px;
+  box-shadow: 5px 10px 18px #888888;
+}
+.trip_image5 {
+  width: 33%;
+  height: 90%;
+  background-image: url("image/Lifetime.jpg");
+  margin-top: 25px;
+  margin-left: 15px;
+  padding: 10px;
+  box-shadow: 5px 10px 18px #888888;
+}
+.trip_image6 {
+  width: 33%;
+  height: 90%;
+  background-image: url("image/Copy-of-Activities-02-350x450.jpg");
+  margin-top: 25px;
+  margin-left: 30px;
+  padding: 10px;
+  box-shadow: 5px 10px 18px #888888;
+}
+.content_trip_image {
+  width: 90%;
+  height: 40%;
+  text-align: center;
+  margin-top: 220px;
+  margin-left: 16px;
+  margin-right: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.headline_trip {
+  width: 70%;
+  height: 40px;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 18px;
+  font-size: 18px;
+  font-family: "Work Sans", sans-serif;
+  color: white;
+}
+#customers_sections {
+  width: 80%;
+  height: 800px;
+  margin: 0 auto;
+}
