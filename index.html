@@ -1,68 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <link rel="stylesheet" href="style.css" />
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
-    />
+<head>
+  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-    <title>Document</title>
-  </head>
-  <body>
-    <div id="wrap">
-      <div id="header">
-        <div id="nav_bar">
-          <nav class="navbar navbar-default">
-            <div class="container-fluid">
-              <div class="navbar-header">
-                <a class="navbar-brand" href="#">Fantastic Travel</a>
-              </div>
-              <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Home</a></li>
-                <li><a href="#">Trips</a></li>
-                <li><a href="#">Contact</a></li>
-                <li><a href="#">Author</a></li>
-              </ul>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
+  
+  <script
+  src="https://code.jquery.com/jquery-3.5.1.min.js"
+  integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+  crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+  
+  <script
+  defer
+  src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"
+  integrity="sha256-eGE6blurk5sHj+rmkfsGYeKyZx3M4bG+ZlFyA7Kns7E="
+  crossorigin="anonymous"></script>
+
+  <script src="script.js"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" integrity="sha512-aOG0c6nPNzGk+5zjwyJaoRUgCdOrfSDhmMID2u4+OIslr0GjpLKo7Xm0Ao3xmpM4T8AmIouRkqwj1nrdVsLKEQ==" crossorigin="anonymous" />
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="wrap">
+    <div id="header">
+      <div id="nav_bar">
+        <nav class="navbar navbar-default">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <a class="navbar-brand" href="#">Fantastic Travel</a>
             </div>
-          </nav>
-        </div>
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="#">Home</a></li>
+              <li><a href="#">Trips</a></li>
+              <li><a href="#">Contact</a></li>
+              <li><a href="#">Author</a></li>
+            </ul>
+          </div>
+        </nav>
       </div>
-      <div id="motivation_text_image"></div>
-      <div id="agency_info">
-        <div id="agency_info_text">
-          <p class="agency_text">
-            A sabbatical trip presents the ultimate luxury of time to do
-            something different. Whether you’re planning solo, en famille or
-            just the two of you, sabbatical travel requires careful planning and
-            a meticulous attention to detail.
-          </p>
-          <p class="agency_text">
-            We highly recommend you start planning a sabbatical as early as
-            possible. Sabbatical planning takes time with lots of research and
-            shouldn’t feel hurried. With advance planning you avoid any
-            complications such as hotel or flight availability.
-          </p>
-          <div id="agency_text_button">
+    </div>
+    <div id="motivation_text_image">
+      <div class="motivation_text">
+        <h1>YOUR PERFECT TRIP</h1>
+        <h2>Explore the world with a tool that recommends the perfect cities for you.</h2>
+      </div>
+    </div>
+    <div id="agency_info">
+      <div id="agency_info_text">
+        <p class="agency_text">
+          A sabbatical trip presents the ultimate luxury of time to do
+          something different. Whether you’re planning solo, en famille or
+          just the two of you, sabbatical travel requires careful planning and
+          a meticulous attention to detail.
+        </p>
+        <p class="agency_text">
+          We highly recommend you start planning a sabbatical as early as
+          possible. Sabbatical planning takes time with lots of research and
+          shouldn’t feel hurried. With advance planning you avoid any
+          complications such as hotel or flight availability.
+        </p>
+        <div id="agency_text_button">
           <button type="button" class="btn btn-warning" style="font-family: monospace;
           font-size: 15px;">View more</button>
-          
+
           </button>
         </div>
+      </div>
+      <div id="agency_info_image">
+        <img src="image/4811_suitcase-diy.jpg" alt="suitcase" />
+      </div>
+    </div>
+    <hr style="width: 80%; margin-top: 50px;">
+
+    <div id="trip_list" class="container-fluid">
+      <div id="title_trip_list">
+        <h1 style="text-align: center; font-family: auto; font-size: 40px; margin: 0px;">Trip List</h1>
+        <input type="text" id="search">
+      </div>
+      <div class="row" id="bookListing">
+        <div class="col-md-6 col-lg-4 col-sm-12">
+          <div class="trip_image1">
+            <div class="content_trip_image">
+              <button class="px-3 mb-3 category bg-primary btn" style="width: 100px;
+                        margin: 0 auto; background-color: #f0ad4e;">$340.00</button>
+              <h2 class="headline_trip">Bora Bora</h2>
+              <button type="button" class="btn btn-secondary" style="width: 40%;
+                        margin: 0 auto; background-color: #f0ad4e; color: white; margin-top: 17px;">View more</button>
+            </div>
+          </div>
         </div>
-        <div id="agency_info_image">
-          <img src="image/4811_suitcase-diy.jpg" alt="suitcase" />
+        <div class="col-md-6 col-lg-4">
+          <div class="trip_image1">
+            <div class="content_trip_image">
+              <button class="px-3 mb-3 category bg-primary btn" style="width: 100px;
+                        margin: 0 auto; background-color: #f0ad4e;">$340.00</button>
+              <h2 class="headline_trip">Bora Bora</h2>
+              <button type="button" class="btn btn-secondary" style="width: 40%;
+                        margin: 0 auto; background-color: #f0ad4e; color: white; margin-top: 17px;">View more</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="trip_image1">
+            <div class="content_trip_image">
+              <button class="px-3 mb-3 category bg-primary btn" style="width: 100px;
+                        margin: 0 auto; background-color: #f0ad4e;">$340.00</button>
+              <h2 class="headline_trip">Bora Bora</h2>
+              <button type="button" class="btn btn-secondary" style="width: 40%;
+                        margin: 0 auto; background-color: #f0ad4e; color: white; margin-top: 17px;">View more</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="trip_image1">
+            <div class="content_trip_image">
+              <button class="px-3 mb-3 category bg-primary btn" style="width: 100px;
+                            margin: 0 auto; background-color: #f0ad4e;">$340.00</button>
+              <h2 class="headline_trip">Bora Bora</h2>
+              <button type="button" class="btn btn-secondary" style="width: 40%;
+                            margin: 0 auto; background-color: #f0ad4e; color: white; margin-top: 17px;">View
+                more</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="trip_image1">
+            <div class="content_trip_image">
+              <button class="px-3 mb-3 category bg-primary btn" style="width: 100px;
+                            margin: 0 auto; background-color: #f0ad4e;">$340.00</button>
+              <h2 class="headline_trip">Bora Bora</h2>
+              <button type="button" class="btn btn-secondary" style="width: 40%;
+                            margin: 0 auto; background-color: #f0ad4e; color: white; margin-top: 17px;">View
+                more</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="trip_image1">
+            <div class="content_trip_image">
+              <button class="px-3 mb-3 category bg-primary btn" style="width: 100px;
+                            margin: 0 auto; background-color: #f0ad4e;">$340.00</button>
+              <h2 class="headline_trip">Bora Bora</h2>
+              <button type="button" class="btn btn-secondary" style="width: 40%;
+                            margin: 0 auto; background-color: #f0ad4e; color: white; margin-top: 17px;">View
+                more</button>
+            </div>
+          </div>
         </div>
       </div>
-      <hr style="width: 80%; margin-top: 50px;">
-    
-    <div id="trip_list">
-        <div id="title_trip_list"><h1 style="text-align: center; font-family: auto; font-size: 40px; margin: 0px;">Trip List</h1></div>
-        <div class="trip_box">
+
+
+      <!--         <div class="trip_box">
             <div class="trip_image1">
                 <div class="content_trip_image">
                         <button class="px-3 mb-3 category bg-primary btn" style="width: 100px;
@@ -109,10 +204,155 @@
                         <button type="button" class="btn btn-secondary" style="width: 40%;
                         margin: 0 auto; background-color: #f0ad4e; color: white; margin-top: 17px;">View more</button>
                 </div></div>
-        </div>
+        </div> 
         <hr style="width: 80%; margin-top: 50px;">
-        <div id="customers_sections"></div>
+        <div id="customers_sections"></div> -->
+
     </div>
+    <hr style="width: 80%; margin-top: 50px;">
+    <div class="customer_title">Happy Customers</div>
+    <div class="happy_customers" class="container-fluid">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="customer">
+            <span class="icon-keyboard_arrow_left"></span>
+            <div class="customer_picture"></div>
+            <div class="customer_text">
+              <p class="p_customer_text">Best travel agency, cheap prices, good tours, good time traveling</p>
+              <p class="p_customer_text">
+                An excellent cooperation</p>
+              <p class="p_customer_text">-Marry </p>
+            </div>
+
+
+
+
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="customer">
+            <span class="icon-keyboard_arrow_left"></span>
+            <div class="customer_picture"></div>
+            <div class="customer_text">
+              <p class="p_customer_text">I have been traveling with this agency for a long time, very correct
+                cooperation, the staff is very
+                kind</p>
+              <p class="p_customer_text">-John</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
     </div>
-  </body>
+    <hr style="width: 80%; margin-top: 50px;">
+    <div class="author">
+      <div class="author_title">
+        <div class="row">
+          <div class="col-md-12">
+            <p>About author</p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4"><img src="image/1607199109_tmp_129588921_3570720903043116_8532136150659752564_n.jpg">
+        </div>
+        <div class="col-md-8">
+          <p>My name is Ivana Panić, my index number is 176/16. I finished primary and secondary dental school, I am
+            currently attending ICT college. In my free time I like to travel, listen to music, hang out with friends
+          </p>
+          <p>
+            Programming started to interest me a couple of years ago and that is why I am studying at this faculty</p>
+          <p>
+            I was born in Belgrade</p>
+          <p>
+            I'm 22 years old</p>
+        </div>
+      </div>
+    </div>
+    <div class="container contact">
+      <div class="row">
+        <div class="col-md-3">
+          <div class="contact-info">
+            <img src="https://image.ibb.co/kUASdV/contact-image.png" alt="image" />
+            <h2>Contact Us</h2>
+            <h4>We would love to hear from you !</h4>
+          </div>
+        </div>
+        <div class="col-md-9">
+          <div class="contact-form">
+            <div class="form-group">
+              <label class="control-label col-sm-2" for="fname">First Name:</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" id="fname" placeholder="Enter First Name" name="fname">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label col-sm-2" for="lname">Last Name:</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" id="lname" placeholder="Enter Last Name" name="lname">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label col-sm-2" for="email">Email:</label>
+              <div class="col-sm-10">
+                <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label col-sm-2" for="comment">Comment:</label>
+              <div class="col-sm-10">
+                <textarea class="form-control" rows="5" id="comment"></textarea>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-sm-offset-2 col-sm-10">
+                <button type="submit" class="btn btn-default">Submit</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="wrapp_footer">
+        <div class="row">
+          <div class="col-md-8">
+            <div class="footer_link_title">
+              <h2 class="footer_title">Quick links</h2>
+            </div>
+            <ul>
+              <li>Home</li>
+              <li>Trips</li>
+              <li>Author</li>
+              <li>Contact</li>
+            </ul>
+
+          </div>
+          <div class="col-md-4">
+            <div class="newsletter_title">
+              <h2 class="footer_title">Newsletter</h2>
+            </div>
+            <div class="newsletter_text">
+              <p>Let's stay in touch with new news</p>
+            </div>
+            <div class="input-group mb-3">
+              <input type="text" class="form-control" placeholder="Email" aria-label="Recipient's username"
+                aria-describedby="basic-addon2">
+              <div class="input-group-append">
+                <button class="btn btn-outline-secondary" type="button">Button</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <p class="copyright_text">Copyright © 2020 Trips | All rights reserved</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+
 </html>

@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Rubik:500,700|Roboto:400,600");
 body {
   width: 100%;
   height: 100%;
@@ -27,12 +28,48 @@ body {
   height: 100%;
   float: right;
 }
+
+.motivation_text {
+  z-index: 2;
+  position: relative;
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.motivation_text h1 {
+  font-size: 30px;
+  color: #fff;
+}
+
+.motivation_text h2 {
+  font-size: 22px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
 #motivation_text_image {
   width: 100%;
   height: 630px;
-  background-image: url("image/WTTC Together In Travel.jpg");
+  background-image: url("image/header.jpg");
   background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
+#motivation_text_image:before {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: 0;
+  right: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.4);
+}
+
 #agency_info {
   width: 80%;
   height: 100%;
@@ -64,14 +101,9 @@ body {
   margin: 0 auto;
   padding-top: 18px;
 }
-#title_trip_list {
-  margin: 0 auto;
-  height: 30px;
-  width: 30%;
-}
+
 #trip_list {
   width: 80%;
-  height: 1000px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -93,8 +125,8 @@ hr {
   display: flex;
   justify-content: center;
 }
+
 .trip_image1 {
-  width: 33%;
   height: 90%;
   background-image: url("image/10.-Daydream-Full-Island-looking-East-to-Molle-Islands-Large-350x450.jpg");
   margin-top: 25px;
@@ -169,6 +201,104 @@ hr {
 }
 #customers_sections {
   width: 80%;
-  height: 800px;
+  margin: 0 auto;
+}
+.customer_title {
+  width: 350px;
+  margin: 0 auto;
+  text-align: center;
+  padding-bottom: 30px;
+  font: auto;
+  font-size: 40px;
+}
+.happy_customers {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+.customer {
+  display: flex;
+  height: 280px;
+  width: 90%;
+  margin: 0 auto;
+  background-color: #f0ad4e;
+}
+.customer_picture {
+  width: 90px;
+  height: 90px;
+}
+.customer_text {
+  width: 70%;
+  margin-top: 100px;
+}
+p {
+  font-size: 20px;
+  font: auto;
+}
+.p_customer_text {
+  font-size: 20px;
+  font: auto;
+  color: whitesmoke;
+}
+.author_title {
+  margin: 0 auto;
+  text-align: center;
+  padding-bottom: 40px;
+}
+.author {
+  margin: 0 auto;
+  width: 70%;
+}
+
+.contact {
+  padding: 4%;
+}
+.col-md-3 {
+  background: #f0ad4e;
+  padding: 4%;
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+}
+.contact-info {
+  margin-top: 10%;
+}
+.contact-info img {
+  margin-bottom: 15%;
+}
+.contact-info h2 {
+  margin-bottom: 10%;
+}
+.col-md-9 {
+  background: #fff;
+  padding: 3%;
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
+.contact-form label {
+  font-weight: 600;
+}
+.contact-form button {
+  background: #f0ad4e;
+  color: #fff;
+  font-weight: 600;
+  width: 25%;
+}
+.contact-form button:focus {
+  box-shadow: none;
+}
+footer {
+  margin: 0 auto;
+  width: 100%;
+
+  background-color: grey;
+}
+.copyright_text {
+  text-align: center;
+  padding-top: 20px;
+  font-size: 13px;
+}
+.wrapp_footer {
+  width: 60%;
   margin: 0 auto;
 }
