@@ -53,7 +53,7 @@ $(document).ready(function() {
        </div>`);
   };
 });
-
+// GALLERY SLIDER
 $(document).ready(function() {
   $(".slider").bxSlider({
     autoControls: true,
@@ -67,58 +67,84 @@ $(document).ready(function() {
 });
 
 //FORM VALIDATION
-document.getElementById("submit").addEventListener("click", function proveri() {
-  var name = document.querySelector("#form-name").value;
-  var email = document.querySelector("#form-email").value;
-  var phone = document.querySelector("#form-phone").value;
-  var text = document.querySelector("#form-text").value;
+document
+  .getElementById("submit")
+  .addEventListener("click", function proveri(event) {
+    event.stopImmediatePropagation();
+    event.preventDefault();
+    var name = document.querySelector("#form-name").value;
+    var email = document.querySelector("#form-email").value;
+    var phone = document.querySelector("#form-phone").value;
+    var text = document.querySelector("#form-text").value;
 
-  var regexName = /^[A-Z][a-z]+$/;
-  if (!regexName.test(name)) {
-    document.querySelector("name").classList.remove("Tacno");
-    document.querySelector("name").classList.add("Netacno");
-    document.querySelector("nameAlert").innerHTML =
-      "Please write a correct Name!";
-  } else {
-    document.querySelector("name").classList.remove("Netacno");
-    document.querySelector("name").classList.add("Tacno");
-    document.querySelector("nameAlert").innerHTML = "";
-  }
-  var regexEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/;
-  if (!regexEmail.test(email)) {
-    document.querySelector("email").classList.remove("Tacno");
-    document.querySelector("email").classList.add("Netacno");
-    document.querySelector("emailAlert").innerHTML =
-      "Please write a correct Name!";
-  } else {
-    document.querySelector("email").classList.remove("Netacno");
-    document.querySelector("email").classList.add("Tacno");
-    document.querySelector("emailAlert").innerHTML = "";
-  }
-  var regexPhone = /^06[01234569]\/[\d]{6,7}$/;
-  if (!regexPhone.test(phone)) {
-    document.querySelector("phone").classList.remove("Tacno");
-    document.querySelector("phone").classList.add("Netacno");
-    document.querySelector("phoneAlert").innerHTML =
-      "Please write a correct phone!";
-  } else {
-    document.querySelector("phone").classList.remove("Netacno");
-    document.querySelector("phone").classList.add("Tacno");
-    document.querySelector("phoneAlert").innerHTML = "";
-  }
-  var regexText = /^[A-ZČĆŽŠĐ][a-zčćžšđ]([\d \w]{5,100})$/;
-  if (!regexText.test(text)) {
-    document.querySelector("text").classList.remove("Tacno");
-    document.querySelector("text").classList.add("Netacno");
-    document.querySelector("textAlert").innerHTML =
-      "Please write a correct message!";
-  } else {
-    document.querySelector("text").classList.remove("Netacno");
-    document.querySelector("text").classList.add("Tacno");
-    document.querySelector("textAlert").innerHTML = "";
-  }
-});
+    var inputName = document.querySelector("#form-name");
+    var inputEmail = document.querySelector("#form-email");
+    var inputPhone = document.querySelector("#form-phone");
+    var inputText = document.querySelector("#form-text");
 
+    var regexName = /^[A-Z][a-z]+$/;
+    if (!regexName.test(name)) {
+      inputName.classList.remove("Tacno");
+      inputName.classList.add("Netacno");
+      inputName.innerHTML = "Please write a correct Name!";
+    } else {
+      inputName.classList.remove("Netacno");
+      inputName.classList.add("Tacno");
+      inputName.innerHTML = "";
+    }
+    var regexEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/;
+    if (!regexEmail.test(email)) {
+      inputEmail.classList.remove("Tacno");
+      inputEmail.classList.add("Netacno");
+      inputEmail.innerHTML = "Please write a correct Name!";
+    } else {
+      inputEmail.classList.remove("Netacno");
+      inputEmail.classList.add("Tacno");
+      inputEmail.innerHTML = "";
+    }
+    var regexPhone = /^06[01234569]\/[\d]{6,7}$/;
+    if (!regexPhone.test(phone)) {
+      inputPhone.classList.remove("Tacno");
+      inputPhone.classList.add("Netacno");
+      inputPhone.innerHTML = "Please write a correct phone!";
+    } else {
+      inputPhone.classList.remove("Netacno");
+      inputPhone.classList.add("Tacno");
+      inputPhone.innerHTML = "";
+    }
+    var regexText = /^[A-ZČĆŽŠĐ][a-zčćžšđ]([\d \w]{5,100})$/;
+    if (!regexText.test(text)) {
+      inputText.classList.remove("Tacno");
+      inputText.classList.add("Netacno");
+      inputText.innerHTML = "please";
+      inputText.innerHTML.style.color = "red";
+    } else {
+      inputText.classList.remove("Netacno");
+      inputText.classList.add("Tacno");
+      inputText.innerHTML = "";
+    }
+  });
+//FOOTER VALIDATION
+document
+  .getElementById("footer-button")
+  .addEventListener("click", function validationF(event) {
+    event.stopImmediatePropagation();
+    event.preventDefault();
+    var emailFooter = document.querySelector("#ffooter").value;
+    var inputEmailFooter = document.querySelector("#ffooter");
+
+    var regexemailFooter = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/;
+    if (!regexemailFooter.test(emailFooter)) {
+      inputEmailFooter.classList.remove("Tacno");
+      inputEmailFooter.classList.add("Netacno");
+      inputEmailFooter.innerHTML = "Please write a correct email!";
+    } else {
+      inputEmailFooter.classList.remove("Netacno");
+      inputEmailFooter.classList.add("Tacno");
+      inputEmailFooter.innerHTML = "";
+    }
+  });
+//FOOTER VALIDATION END
 $(document).ready(function() {
   $("#goToHome").click(function() {
     $("html").animate(
@@ -161,7 +187,49 @@ $(document).ready(function() {
       500
     );
   });
+  $("#goToAbout").click(function() {
+    $("html").animate(
+      {
+        scrollTop: $("#library_info").offset().top - 55
+      },
+      500
+    );
+  });
+
+  $("#footer-home").click(function() {
+    $("html").animate(
+      {
+        scrollTop: $("#motivation_text_image").offset().top - 55
+      },
+      500
+    );
+  });
+  $("#footer-book").click(function() {
+    $("html").animate(
+      {
+        scrollTop: $("#bookListing").offset().top - 55
+      },
+      500
+    );
+  });
+  $("#footer-author").click(function() {
+    $("html").animate(
+      {
+        scrollTop: $(".author").offset().top - 55
+      },
+      500
+    );
+  });
+  $("#footer-contact").click(function() {
+    $("html").animate(
+      {
+        scrollTop: $(".contact-image").offset().top - 55
+      },
+      500
+    );
+  });
 });
+//MODAL ZA SEKCIJU ABOUTH
 window.onload = function() {
   var Mymodal = document.getElementById("modal");
   var btn = document.getElementById("MyBtn");

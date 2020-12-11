@@ -400,3 +400,39 @@ ul li {
   text-decoration: none;
   cursor: pointer;
 }
+#manu {
+}
+@media (max-width: 960px) and (min-width: 501px) {
+  #manu li {
+    width: 50%;
+  }
+}
+@media (max-width: 500px) {
+  #manu li {
+    width: 100%;
+  }
+}
+@media (max-width: 960px) {
+  #manu {
+    display: block;
+  }
+
+  #manu li {
+    display: inline-block;
+  }
+}
+
+.wrapp_footer a:hover {
+  color: white;
+}
+.wrapp_footer a:link {
+  text-decoration: none;
+}
+button {
+  border-color: #2196f3;
+  color: white;
+}
+button:hover {
+  background: #2196f3;
+  color: white;
+}
