@@ -66,7 +66,8 @@ $(document).ready(function() {
   });
 });
 
-$(document).ready(function proveri() {
+//FORM VALIDATION
+document.getElementById("submit").addEventListener("click", function proveri() {
   var name = document.querySelector("#form-name").value;
   var email = document.querySelector("#form-email").value;
   var phone = document.querySelector("#form-phone").value;
@@ -117,3 +118,63 @@ $(document).ready(function proveri() {
     document.querySelector("textAlert").innerHTML = "";
   }
 });
+
+$(document).ready(function() {
+  $("#goToHome").click(function() {
+    $("html").animate(
+      {
+        scrollTop: $("#motivation_text_image").offset().top - 55
+      },
+      500
+    );
+  });
+  $("#goToBook").click(function() {
+    $("html").animate(
+      {
+        scrollTop: $("#bookListing").offset().top - 55
+      },
+      500
+    );
+  });
+  $("#goToGallery").click(function() {
+    $("html").animate(
+      {
+        scrollTop: $("#wrapp_slider").offset().top - 55
+      },
+      500
+    );
+  });
+  $("#goToAuthor").click(function() {
+    $("html").animate(
+      {
+        scrollTop: $(".author").offset().top - 55
+      },
+      500
+    );
+  });
+
+  $("#goToContact").click(function() {
+    $("html").animate(
+      {
+        scrollTop: $(".contact-image").offset().top - 55
+      },
+      500
+    );
+  });
+});
+window.onload = function() {
+  var Mymodal = document.getElementById("modal");
+  var btn = document.getElementById("MyBtn");
+  var span = document.getElementsByClassName("close")[0];
+  btn.onclick = function() {
+    Mymodal.style.display = "block";
+  };
+  span.onclick = function() {
+    modal.style.display = "none";
+  };
+  window.onclick = function(event) {
+    if (event.target == Mymodal) {
+      Mymodal.style.display = "none";
+    }
+  };
+};
