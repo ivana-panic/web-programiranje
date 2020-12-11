@@ -25,7 +25,6 @@
     crossorigin="anonymous" />
 
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 
   <!--<link rel="stylesheet" type="text/css" href="slick/slick.css" />
@@ -36,8 +35,6 @@
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 
 
@@ -49,9 +46,12 @@
   <script "text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script "text/javascript" src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
 
-  <script src="script.js"></script>
+
 
   <title>Document</title>
+  <script src="script.js" defer></script>
+
+
 </head>
 
 <body>
@@ -64,13 +64,11 @@
               <a class="navbar-brand" href="#">Cosmo Library</a>
             </div>
             <ul class="nav navbar-nav">
-              <li class="active"><a href="#">Home</a></li>
-              <li><a href="#">About Library</a></li>
-              <li><a href="#">Book</a></li>
-              <li><a href="#">Happy customer</a></li>
-              <li><a href="#">Gallery</a></li>
-              <li><a href="#">Author</a></li>
-              <li><a href="#">Contact</a></li>
+              <li class="active"><a href="#" id="goToHome">Home</a></li>
+              <li><a href="#" id="goToBook">Book</a></li>
+              <li><a href="#" id="goToGallery">Gallery</a></li>
+              <li><a href="#" id="goToAuthor">Author</a></li>
+              <li><a href="#" id="goToContact">Contact</a></li>
             </ul>
           </div>
         </nav>
@@ -94,11 +92,21 @@
           military...
         </p>
         <div id="library_text_button">
-          <button type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off">
-            Single toggle
+          <button type="button" class="btn btn-primary" id="MyBtn" data-toggle="button" aria-pressed="false"
+            autocomplete="off">
+            View more
           </button>
-
-          </button>
+          <div id="modal">
+            <div class="modal_content">
+              <span class="close">&times;</span>
+              <p>
+                The Cosmo Library is located in New York City,the Library of America editions encompass all periods and
+                genres — including acknowledged classics,
+                neglected masterpieces, and historically important documents and texts — and showcase the vitality and
+                variety of America’s literary legacy. Additional public programs, digital resources, and community
+                partnerships help readers worldwide make meaningful connections with the nation’s written heritage.</p>
+            </div>
+          </div>
         </div>
       </div>
       <div id="library_info_image">
@@ -109,7 +117,7 @@
 
     <div id="book_list" class="container-fluid">
       <div id="title_book_list">
-        <h1 style="text-align: center; font-family: auto; font-size: 40px; margin: 0px;">book List</h1>
+        <h1 style="text-align: center; font-family: auto; font-size: 40px; margin: 0px;">Book List</h1>
         <input type="text" id="search">
       </div>
       <div class="row" id="bookListing">
@@ -193,12 +201,15 @@
         <div class="col-md-6">
 
           <div class="customer">
-            <span class="icon-keyboard_arrow_left"></span>
-            <div class="customer_picture"></div>
+
+            <div class="customer_picture">
+              <img src="image/girl.jpg" class="girl_customer">
+            </div>
             <div class="customer_text">
-              <p class="p_customer_text">Best travel library, cheap prices, good tours, good time traveling</p>
               <p class="p_customer_text">
-                An excellent cooperation</p>
+                The best library in town, a large selection of books, very friendly staff.</p>
+              <p class="p_customer_text">
+                Very good :)</p>
               <p class="p_customer_text">-Marry </p>
             </div>
 
@@ -211,11 +222,13 @@
 
           <div class="customer">
             <span class="icon-keyboard_arrow_left"></span>
-            <div class="customer_picture"></div>
+            <div class="customer_picture">
+              <img src="image/man.jpg" class="girl_customer">
+            </div>
             <div class="customer_text">
-              <p class="p_customer_text">I have been traveling with this library for a long time, very correct
-                cooperation, the staff is very
-                kind</p>
+              <p class="p_customer_text">I like science books the most, they have everything from my favorite writer!
+              </p>
+              <p class="p_customer_text">I'm thrilled, see you soon</p>
               <p class="p_customer_text">-John</p>
             </div>
           </div>
@@ -253,20 +266,23 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-md-4"><img src="image/1607199109_tmp_129588921_3570720903043116_8532136150659752564_n.jpg">
+        <div class="col-md-4"><img src="image/1607199200_tmp_129588921_3570720903043116_8532136150659752564_n.png"
+            class="author_image">
         </div>
         <div class="col-md-8">
-          <p>My name is Ivana Panić, my index number is 176/16. I finished primary and secondary dental school, I am
+          <p class="author_text">My name is Ivana Panić, my index number is 176/16. I finished primary and secondary
+            dental school, I am
             currently attending ICT college. In my free time I like to travel, listen to music, hang out with
             friends
           </p>
-          <p>
+          <p class="author_text">
             Programming started to interest me a couple of years ago and that is why I am studying at this faculty
           </p>
-          <p>
-            I was born in Belgrade</p>
-          <p>
-            I'm 22 years old</p>
+          <p class="author_text">
+
+            I was born in Belgrade, I still live there. I'm 22 years old</p>
+          <p class="author_text">
+          </p>
         </div>
       </div>
     </div>
@@ -275,7 +291,7 @@
       <div class="contact-image">
         <img src="https://image.ibb.co/kUagtU/rocket_contact.png" alt="rocket_contact" />
       </div>
-      <form method="post">
+      <form method="post" id="cnt_form">
         <h3>Drop Us a Message</h3>
         <div class="row">
           <div class="col-md-6">
@@ -291,7 +307,7 @@
                 value="" />
             </div>
             <div class="form-group">
-              <input type="submit" name="btnSubmit" class="btnContact" value="Send Message" />
+              <input type="submit" name="btnSubmit" class="btnContact" id="submit" value="Send Message" />
             </div>
           </div>
           <div class="col-md-6">
@@ -312,7 +328,7 @@
             </div>
             <ul>
               <li>Home</li>
-              <li>books</li>
+              <li>Books</li>
               <li>Author</li>
               <li>Contact</li>
             </ul>
@@ -340,14 +356,12 @@
           </div>
         </div>
       </div>
+
     </footer>
   </div>
 
 
 
-  <!--<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-  <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-  <script type="text/javascript" src="slick/slick.min.js"></script> -->
 </body>
 
 </html>
